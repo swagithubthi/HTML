@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>varify all the text boxes are filled or not</title>
+        <script type="text/javascript">
+            function verify(){
+                if(document.sform.sregno.value==" "){
+                    alert("register number should not empty");
+                    document.sform.sregno.focus();
+                    return false;
+                }
+                if(document.sform.sname.value==" "){
+                    alert("name should not empty");
+                    document.sform.sname.focus();
+                    return false;
+                }
+                if(document.sform.smobile.value==" "){
+                    alert("mobile number  should not empty");
+                    document.sform.smobile.focus();
+                    return false;
+                }
+                if(document.sform.sregno.value!=" "&&document.sform.sname.value!=""&&document.sform.smobile.value!="")
+                {
+                    alert("all text boxes are filled");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="sform" onsubmit="return(verify())">
+            <pre>
+                <h1>Student form</h1>
+                register num :<input type="text" name="sregno"> <br>
+                Student name:<input type="text" name="sname"> <br>
+                mobile num :<input type="text" name="smobile"> <br>
+            </pre>
+<input type="submit" name="sexecute" value="execute">
+        </form>
+    </body>
+</html>
